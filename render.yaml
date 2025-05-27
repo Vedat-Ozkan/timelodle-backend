@@ -1,0 +1,16 @@
+# render.yaml
+
+services:
+  - type: web
+    name: timelodle-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn timelodle.wsgi:application"
+    staticPublishPath: staticfiles
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: your-secret-key
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: timelodle-backend.onrender.com
