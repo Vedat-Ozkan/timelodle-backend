@@ -16,7 +16,7 @@ class View(viewsets.ModelViewSet):
 class rand_five(viewsets.ModelViewSet):
   serializer_class = rand_five_serializer
   def get_queryset(request):
-    random.seed(date.today())
+    random.seed(str(date.today()))
 
     p1, p2, p3 = random.sample(range(1, 1000), 3)
     p4 = random.randint(1001, 5000)
