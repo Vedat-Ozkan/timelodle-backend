@@ -66,6 +66,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://timelodle-frontend.vercel.app/",  # replace with your actual frontend URL
+]
+
 ROOT_URLCONF = 'timelodle.urls'
 
 TEMPLATES = [
