@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-xvfywr7-!7=$(*5hn6g4m#qf6n9a9%@f(!dkmi#j#prn64x0_x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'timelodle-backend.onrender.com',  # ✅ Add this
+    'localhost',  # optional for local testing
+]
 
 
 # Application definition
