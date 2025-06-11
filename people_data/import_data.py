@@ -7,7 +7,7 @@ import math;
 def run():
   # Read CSV file into a DataFrame
   csv_file_path = '../data/database.csv'
-  df = pd.read_csv(csv_file_path, encoding='utf-8').head(10000)
+  df = pd.read_csv(csv_file_path, encoding='utf-8').head(4000)
   # Iterate through the DataFrame and create model instances
   count = 1
   for index, row in df.iterrows():

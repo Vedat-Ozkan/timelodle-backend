@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'timelodle-backend.onrender.com',  # ✅ Add this
     'localhost',  # optional for local testing
+    '127.0.0.1',
 ]
 
 import os
@@ -68,6 +69,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://timelodle-frontend.vercel.app",  # replace with your actual frontend URL
+    "http://localhost:3000",
 ]
 
 ROOT_URLCONF = 'timelodle.urls'
@@ -142,5 +144,6 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+    'http://localhost:3000'
 ]
+

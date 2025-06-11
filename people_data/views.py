@@ -19,8 +19,8 @@ class rand_five(viewsets.ModelViewSet):
     random.seed(str(date.today()))
 
     p1, p2, p3 = random.sample(range(1, 1000), 3)
-    p4 = random.randint(1001, 5000)
-    p5 = random.randint(5001, 10000)
+    p4 = random.randint(1001, 2000)
+    p5 = random.randint(2001, 4000)
     print([p1, p2, p3, p4, p5])
     queryset = Person.objects.filter(popularity__in=[p1, p2, p3, p4, p5])
 
